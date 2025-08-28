@@ -1,103 +1,169 @@
-import Image from "next/image";
+import Image from "next/image"
+import Link from "next/link"
+import { Input } from "@/components/ui/input"
+import { ArrowRight, Instagram, Linkedin, Twitter, Facebook, ShieldCheck, Eye, Scale, Home } from "lucide-react"
+import HeroSection from "@/components/hero-section"
+import AboutSection from "@/components/about-section"
+import WhyusSection from "@/components/why-us-section"
+import TestimonialSection from "@/components/testimonial-section"
+import CTASection from "@/components/cta-section"
+import Location from "@/components/location"
+import CarsSection from "@/components/cars-section"
+import RentalProcessSection from "@/components/steps-section"
+import Footer from "@/components/footer"
+import WeddingSection from "@/components/wedding-section"
 
-export default function Home() {
+export default function LandingPage() {
   return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+    <div className="min-h-screen bg-dark-background text-light-text">
+      {/* Header/Hero Section */}
+      <HeroSection />
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      {/* About Section */}
+      <AboutSection />
+      
+      {/* Why Choose Us Section (repurposed from Services) */}
+      <WhyusSection />
+
+      {/* cars seciton */}
+      <CarsSection />
+
+      {/* wedding section */}
+      <WeddingSection />
+
+      {/* Featured Listings Section (repurposed from Our Work) */}
+      {/* <section className="py-16 md:py-24 lg:py-32 max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
+        <div className="text-sm font-light uppercase text-subtle-gray mb-2">Exclusive</div>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight mb-12">Featured Listings</h2>
+        <div className="grid md:grid-cols-3 gap-8">
+          <div className="flex flex-col">
+            <div className="relative w-full h-[250px] mb-4">
+              <Image
+                src="/placeholder.svg?height=250&width=400"
+                alt="Luxury Villa"
+                fill
+                className="object-cover object-center"
+              />
+            </div>
+            <h3 className="text-xl font-light mb-2">Spacious Villa in Bole</h3>
+            <p className="text-sm text-subtle-gray mb-2">Price: $1,500,000</p>
+            <p className="text-sm text-subtle-gray mb-4">Location: Bole, Addis Ababa</p>
+            <Link href="#" className="text-sm font-light uppercase hover:text-subtle-gray transition-colors">
+              View Details
+            </Link>
+          </div>
+          <div className="flex flex-col">
+            <div className="relative w-full h-[250px] mb-4">
+              <Image
+                src="/placeholder.svg?height=250&width=400"
+                alt="Modern Apartment"
+                fill
+                className="object-cover object-center"
+              />
+            </div>
+            <h3 className="text-xl font-light mb-2">Modern Apartment in Summit</h3>
+            <p className="text-sm text-subtle-gray mb-2">Price: $750,000</p>
+            <p className="text-sm text-subtle-gray mb-4">Location: Summit, Addis Ababa</p>
+            <Link href="#" className="text-sm font-light uppercase hover:text-subtle-gray transition-colors">
+              View Details
+            </Link>
+          </div>
+          <div className="flex flex-col">
+            <div className="relative w-full h-[250px] mb-4">
+              <Image
+                src="/placeholder.svg?height=250&width=400"
+                alt="Luxury Penthouse"
+                fill
+                className="object-cover object-center"
+              />
+            </div>
+            <h3 className="text-xl font-light mb-2">Luxury Penthouse near Old Airport</h3>
+            <p className="text-sm text-subtle-gray mb-2">Price: $2,200,000</p>
+            <p className="text-sm text-subtle-gray mb-4">Location: Old Airport, Addis Ababa</p>
+            <Link href="#" className="text-sm font-light uppercase hover:text-subtle-gray transition-colors">
+              View Details
+            </Link>
+          </div>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      </section> */}
+
+      {/* Neighborhoods Section (new section) */}
+      {/* <section className="py-16 md:py-24 lg:py-32 max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
+        <div className="text-sm font-light uppercase text-subtle-gray mb-2">Explore</div>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight mb-12">
+          Addis Ababa&apos;s Premier Neighborhoods
+        </h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="flex flex-col items-center text-center p-4 border border-subtle-gray rounded-sm">
+            <h3 className="text-2xl font-light mb-2">Bole</h3>
+            <p className="text-sm text-subtle-gray">Vibrant commercial and residential hub</p>
+          </div>
+          <div className="flex flex-col items-center text-center p-4 border border-subtle-gray rounded-sm">
+            <h3 className="text-2xl font-light mb-2">Summit</h3>
+            <p className="text-sm text-subtle-gray">Modern developments and serene living</p>
+          </div>
+          <div className="flex flex-col items-center text-center p-4 border border-subtle-gray rounded-sm">
+            <h3 className="text-2xl font-light mb-2">CMC</h3>
+            <p className="text-sm text-subtle-gray">Family-friendly with amenities and schools</p>
+          </div>
+          <div className="flex flex-col items-center text-center p-4 border border-subtle-gray rounded-sm">
+            <h3 className="text-2xl font-light mb-2">Old Airport</h3>
+            <p className="text-sm text-subtle-gray">Established, prestigious diplomatic area</p>
+          </div>
+        </div>
+      </section> */}
+
+      {/* Testimonials Section (repurposed from Completed Projects) */}
+       <TestimonialSection />
+
+      {/* Partners Section (repurposed from Discuss Your Project) */}
+      {/* <section className="py-16 md:py-24 lg:py-32 max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
+        <div className="text-sm font-light uppercase text-subtle-gray mb-2">Collaborations</div>
+        <h2 className="text-4xl md:text-5xl lg:text-6xl font-light tracking-tight mb-12">Our Esteemed Partners</h2>
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center justify-center">
+          <div className="relative w-full h-24 flex items-center justify-center">
+            <Image
+              src="/placeholder.svg?height=100&width=200"
+              alt="Construction Company Logo"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <div className="relative w-full h-24 flex items-center justify-center">
+            <Image src="/placeholder.svg?height=100&width=200" alt="Bank Logo" fill className="object-contain" />
+          </div>
+          <div className="relative w-full h-24 flex items-center justify-center">
+            <Image
+              src="/placeholder.svg?height=100&width=200"
+              alt="Architect Firm Logo"
+              fill
+              className="object-contain"
+            />
+          </div>
+          <div className="relative w-full h-24 flex items-center justify-center">
+            <Image
+              src="/placeholder.svg?height=100&width=200"
+              alt="Interior Design Logo"
+              fill
+              className="object-contain"
+            />
+          </div>
+        </div>
+      </section> */}
+
+      {/* Contact Section (repurposed from Contacts) */}
+
+      {/* steps section */}
+      <RentalProcessSection />
+
+      {/* cta */}
+      <CTASection />
+
+      {/* location */}
+      {/* <Location /> */}
+
+      {/* Footer */}
+      <Footer />
     </div>
-  );
+  )
 }
