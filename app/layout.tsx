@@ -26,6 +26,7 @@ export const metadata: Metadata = {
     description:
       "Premium wedding cars, executive sedans, and luxury SUVs in Addis Ababa. Professional chauffeurs, elegant car decorations, and reliable service for weddings, business, and events.",
     url: "https://wende.example.com/",
+    
     siteName: "Wende Luxury Car Rental",
     images: [
       {

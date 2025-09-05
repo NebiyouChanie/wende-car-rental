@@ -127,7 +127,7 @@ const slides = [
         >
           <Image
             src={slide.image || "/placeholder.svg"}
-            alt={slide.title}
+            alt={t(slides[index].titleKey)}
             fill
             priority={index === 0}
             className="object-cover object-center"
