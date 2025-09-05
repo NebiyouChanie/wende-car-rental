@@ -11,7 +11,7 @@ const carBrands = [
     id: 1,
     name: "Mercedes-Benz",
     tagline: "The Best or Nothing",
-    image: "/car1.png",
+    image: "/hero22.png",
   },
   {
     id: 2,
@@ -21,25 +21,14 @@ const carBrands = [
   },
   {
     id: 3,
-    name: "Audi",
+    name: "Land Cruiser",
     tagline: "Vorsprung durch Technik",
-    image: "/car22.png",
+    image: "/car1.png",
   },
-  {
-    id: 4,
-    name: "Porsche",
-    tagline: "There Is No Substitute",
-    image: "/car3.png",
-  },
-  {
-    id: 5,
-    name: "Rolls-Royce",
-    tagline: "Effortless Power, Unrivalled Luxury",
-    image: "/car4.png",
-  },
+   
   {
     id: 6,
-    name: "Lexus",
+    name: "Hummer",
     tagline: "Experience Amazing",
     image: "/car44.png",
   },

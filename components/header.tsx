@@ -1,6 +1,6 @@
 'use client'
 
-import { Menu, X } from 'lucide-react'
+import { Menu, PhoneCall, X } from 'lucide-react'
 import Image from "next/image"
 import Link from "next/link"
 import { useEffect, useState } from "react"
@@ -65,7 +65,7 @@ export default function Header() {
           
           {/* Desktop Navigation */}
           <nav className="hidden lg:flex items-center space-x-8 text-sm font-light uppercase">
-            <Link href="#" className="text-white hover:scale-105 hover:text-luxuryGreen hover:border-b hover:border-subtleGray pb-2 hover:pb-2 transition-all duration-300">
+            <Link href="/" className="text-white hover:scale-105 hover:text-luxuryGreen hover:border-b hover:border-subtleGray pb-2 hover:pb-2 transition-all duration-300">
               {t('nav.home')}
             </Link>
             <Link href="/cars" className="text-white hover:scale-105 hover:text-luxuryGreen hover:border-b hover:border-subtleGray pb-2 hover:pb-2 transition-all duration-300">
@@ -82,10 +82,8 @@ export default function Header() {
             </Link>
           </nav>
 
-          {/* Desktop Phone */}
-          <div className="text-sm text-white font-light hidden md:block">
-            {"+(251) 912 345 678"}
-          </div>
+          <div className='flex items-center gap-4'>
+
 
           {/* Language Switcher + Mobile Menu Button */}
           <button
@@ -97,13 +95,17 @@ export default function Header() {
           </button>
           <div className="hidden md:flex items-center gap-2">
             <button
-              onClick={() => setLang('en')}
-              className={`px-3 py-1 text-xs uppercase rounded border ${lang === 'en' ? 'border-luxuryGreen text-luxuryGreen' : 'border-subtleGray text-subtleGray'} transition-colors`}
-            >EN</button>
-            <button
-              onClick={() => setLang('am')}
-              className={`px-3 py-1 text-xs uppercase rounded border ${lang === 'am' ? 'border-luxuryGreen text-luxuryGreen' : 'border-subtleGray text-subtleGray'} transition-colors`}
-            >አማ</button>
+              onClick={() => setLang(lang === 'en' ? 'am' : 'en')}
+              className={`px-3 py-1 text-xs text-white uppercase rounded border ${'border-subtleGray text-subtleGray hover:border-luxuryGreen hover:text-luxuryGreen'} transition-colors`}
+            >
+              {lang === 'en' ? 'አማርኛ' : 'EN'}
+            </button>
+          </div>
+          {/* Desktop Phone */}
+          <div className="text-sm text-white font-light hidden md:block gap-2 lg:flex items-center">
+            <PhoneCall />
+            {"0930078365"}
+          </div>
           </div>
         </div>
       </div>
@@ -173,8 +175,12 @@ export default function Header() {
 
           {/* Mobile Language Switcher */}
           <div className="mt-8 flex items-center gap-2">
-            <button onClick={() => setLang('en')} className={`px-3 py-1 text-xs uppercase rounded border ${lang === 'en' ? 'border-luxuryGreen text-luxuryGreen' : 'border-subtleGray text-subtleGray'} transition-colors`}>EN</button>
-            <button onClick={() => setLang('am')} className={`px-3 py-1 text-xs uppercase rounded border ${lang === 'am' ? 'border-luxuryGreen text-luxuryGreen' : 'border-subtleGray text-subtleGray'} transition-colors`}>አማ</button>
+            <button 
+              onClick={() => setLang(lang === 'en' ? 'am' : 'en')} 
+              className={`px-3 py-1 text-xs uppercase rounded border border-subtleGray text-subtleGray hover:border-luxuryGreen hover:text-luxuryGreen transition-colors`}
+            >
+              {lang === 'en' ? 'አማ' : 'EN'}
+            </button>
           </div>
 
           {/* Mobile Phone Number */}

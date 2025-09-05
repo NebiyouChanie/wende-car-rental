@@ -37,7 +37,7 @@ const slides = [
     location: "CMC, Addis Ababa",
     descriptionKey:
       'hero.slide3.desc',
-    image: "/hero3.png",
+    image: "/hero333.png",
   },
   {
     id: 4,
@@ -46,7 +46,7 @@ const slides = [
     location: "Old Airport, Addis Ababa",
     descriptionKey:
       'hero.slide4.desc',
-    image: "/car4.png",
+    image: "/hero3.png",
   },
 ];
 

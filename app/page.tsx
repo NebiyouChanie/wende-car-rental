@@ -11,7 +11,7 @@ import Location from "@/components/location"
 import CarsSection from "@/components/cars-section"
 import RentalProcessSection from "@/components/steps-section"
 import Footer from "@/components/footer"
-import WeddingSection from "@/components/wedding-section"
+import ServicesSection from "@/components/services-section"
 
 export default function LandingPage() {
   return (
@@ -28,8 +28,8 @@ export default function LandingPage() {
       {/* cars seciton */}
       <CarsSection />
 
-      {/* wedding section */}
-      <WeddingSection />
+      {/* services section */}
+      <ServicesSection />
 
       {/* Featured Listings Section (repurposed from Our Work) */}
       {/* <section className="py-16 md:py-24 lg:py-32 max-w-7xl mx-auto px-8 md:px-12 lg:px-16">
